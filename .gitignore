@@ -1,0 +1,15 @@
+# Ignore all CSV files
+artifacts/*.csv
+data/*.csv
+
+
+# Ignore virtual environment
+venv/
+.venv/
+
+# Ignore logs
+logs/
+*.log
+*xlsx
+*ipynb
+
