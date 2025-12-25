@@ -17,38 +17,68 @@
 ![UI](Screenshot.png)
 
 Sentiment Analysis/
-| Folder / File                 | Description                                       |
-| ----------------------------- | ------------------------------------------------- |
-| **Sentiment Analysis/**       | Root Project Directory                            |
-| **config/**                   | Central configuration brain                       |
-| └── model_config.yaml         | Stores hyperparameters, file paths, model configs |
-| **data/**                     | Handles complete data lifecycle                   |
-| ├── data_ingestion.py         | Loads data from files / DB / API                  |
-| ├── data_transformation.py    | Cleaning, preprocessing, tokenization             |
-| └── dataset.py                | Dataset definitions for PyTorch / TF              |
-| **models/**                   | Model building module                             |
-| ├── model_architecture.py     | Defines LSTM / BERT / Custom Models               |
-| └── load_pretrained.py        | Loads pretrained model weights                    |
-| **trainers/**                 | Handles model training                            |
-| ├── trainer.py                | Training loop + validation logic                  |
-| ├── lr_scheduler.py           | Learning rate scheduling                          |
-| └── logger.py                 | Logs training metrics                             |
-| **experiments/**              | Runs different ML experiments                     |
-| └── train_pipeline.py         | Connects Data + Model + Trainer to run pipeline   |
-| **inference/**                | Used for predictions                              |
-| └── predict_pipeline.py       | Loads trained model → Predicts sentiment          |
-| **utils/**                    | Helper + Error Handling                           |
-| ├── helpers.py                | Utility functions                                 |
-| └── exceptions.py             | Custom exception handling                         |
-| **notebooks/**                | Research / Experiment Notebooks                   |
-| ├── 01_eda.ipynb              | Exploratory Data Analysis                         |
-| └── 02_prototyping.ipynb      | Prototype models                                  |
-| **tests/**                    | Unit + Integration Tests                          |
-| ├── test_data.py              | Test data pipeline                                |
-| └── test_models.py            | Test models                                       |
-| **deployment_documentation/** | Deployment help                                   |
-| └── local_setup.md            | Run locally instructions                          |
-| **requirements.txt**          | Dependencies                                      |
-| **setup.py**                  | Package installation                              |
-| **README.md**                 | Project Overview                                  |
-| **Screenshot.png**            | UI Preview                                        |
+## 🧠 **Machine Learning Workflow**
+
+| Step                      | Description                               |
+| ------------------------- | ----------------------------------------- |
+| 1️⃣ Data Ingestion        | Load raw dataset                          |
+| 2️⃣ Preprocessing         | Handle missing values, scaling & encoding |
+| 3️⃣ Feature Engineering   | Prepare model-ready features              |
+| 4️⃣ Model Training        | Train multiple regression models          |
+| 5️⃣ Hyperparameter Tuning | Improve performance                       |
+| 6️⃣ Evaluation            | R², MSE, RMSE                             |
+| 7️⃣ Persistence           | Save trained pipeline                     |
+
+---
+
+## 📂 **Project Structure**
+
+| Folder / File      | Purpose              |
+| ------------------ | -------------------- |
+| `app.py`           | FastAPI Web App      |
+| `main.py`          | Optional runner      |
+| `requirements.txt` | Dependencies         |
+| `setup.py`         | Package Setup        |
+| `artifacts/`       | Model & Preprocessor |
+| `src/`             | ML pipeline scripts  |
+| `Notebook/`        | EDA & Model Work     |
+| `templates/`       | Frontend HTML        |
+| `static/`          | CSS + JS             |
+| `logs/`            | Logging files        |
+| `data/`            | Raw + Processed data |
+| `venv/`            | Virtual Environment  |
+
+---
+
+
+## 🖥️ **User Interface**
+
+| Function       | Description                    |
+| -------------- | ------------------------------ |
+| Input Fields   | User enters feature values     |
+| Predict Button | Triggers DL model              |
+| Output         | Displays predicted sentiment   |
+| Chart          | Visualizes results dynamically |
+
+---
+
+## 🛠 **Tech Stack**
+
+| Category  | Tools                           |
+| --------- | ------------------------------- |
+| Backend   | Streamlit                |
+| DL        | Tensor Flow,LSTM, Pandas, NumPy     |
+| Utilities | Logging, Pickle, Modular Design |
+
+---
+
+## 🚀 **Future Enhancements**
+
+| Enhancement          | Status   |
+| -------------------- | -------- |
+| Cloud Deployment     | Planned  |
+| Database Integration | Planned  |
+| CI/CD Pipeline       | Planned  |
+| Advanced Dashboard   | Upcoming |
+
+---
